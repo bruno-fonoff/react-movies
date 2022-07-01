@@ -1,0 +1,28 @@
+#cardMovie {
+  box-shadow: 10px 10px 20px #ff0000;
+  background-color: black;
+}
+.card-body {
+  background-color: black;
+  color: aliceblue;
+  height: 400px;
+}
+.card-text {
+  background-color: black;
+  color: aliceblue;
+  text-align: justify;
+  height: 240px;
+}
+.card-average {
+  font-weight: bolder;
+  color: yellow;
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+#titleMovie {
+  height: 58px;
+  align-items: center;
+}

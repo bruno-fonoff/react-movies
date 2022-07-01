@@ -1,0 +1,25 @@
+#tituloHome {
+  font-size: 100px;
+  text-align: center;
+}
+#cardsHome {
+  text-align: center;
+  margin: 50px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+}
+#tituloCreate {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 150px;
+  text-align: center;
+  text-shadow: 10px 10px 20px #ff0000;
+  display: flex;
+  justify-content: center;
+}
+#createPlay {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+}
