@@ -1,6 +1,7 @@
 #cardMovie {
-  box-shadow: 20px 20px 30px #000000;
+  box-shadow: 20px 20px 30px #ff0000;
   background-color: black;
+  border: #ffffff solid 5px;
 }
 .card-body {
   background-color: black;

@@ -3,18 +3,66 @@
   margin: 50px;
 }
 .cards {
+}
+#cardDetails {
+  margin: 50px;
+}
+#bodyDetails {
   display: flex;
-  margin: 20px;
-  gap: 2em;
+  background-color: black;
+  flex-wrap: wrap;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+#infoPlaylist {
+  color: antiquewhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  background-color: black;
+  text-align: center;
 }
-#cardDetails {
-  margin: 100px;
+#textoDetails {
+  margin-left: 50px;
+  border: 3px solid white;
+  margin: 10px 800px;
+  box-shadow: 20px 20px 30px #ff0000;
+}
+#infoOwner {
+  font-size: 30px;
+}
+#infoCategory {
+  font-size: 30px;
+}
+#infoDate {
+  font-size: 30px;
+}
+#infoId {
+  font-size: 30px;
+}
+b {
+  margin-left: 30px;
+  color: red;
+  font-size: 50px;
+}
+#buttonsDetails {
+  background-color: black;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+#buttonApagarDetails {
+  width: 300px;
+  margin-top: 70px;
+  height: 70px;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+#buttonEditarDetails {
+  width: 300px;
+  margin-top: 70px;
+  height: 70px;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+#voltarHomeDetails {
+  background-color: black;
 }

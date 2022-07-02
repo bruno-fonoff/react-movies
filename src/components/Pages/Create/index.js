@@ -57,12 +57,15 @@ export function Create() {
       <div>
         <Toaster />
       </div>
-      <div id="body">
-        <h1 id="tituloCreate">Crie Sua PlayList</h1>
+      <div id="bodyCreate">
         <div id="header">
           <Link to="/">
             <img className="imgHome" src={home} alt="home" />
           </Link>
+        </div>
+        <div id="tituloooooo">
+          {" "}
+          <h1 id="tituloCreate">Crie Sua PlayList</h1>
         </div>
 
         <div id="form">

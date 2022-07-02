@@ -43,29 +43,55 @@ export function Details() {
 
   return (
     <>
-      <Link to="/">
-        <img className="img" src={home} alt="home" />
-      </Link>
-      <h1>{info.owner}</h1>
-      <p>{info.category}</p>
-      <p>{info.date}</p>
-      <p>{info._id}</p>
+      <div id="voltarHomeDetails">
+        {" "}
+        <Link to="/">
+          <img className="img" src={home} alt="home" />
+        </Link>
+      </div>
 
-      {info.movies.map((currentMovie) => {
-        return (
-          <>
-            <div id="cardDetails">
-              <Card props={currentMovie}></Card>}
-            </div>
-          </>
-        );
-      })}
-      <button onClick={handleDelete} className="btn btn-danger">
-        Apagar Playlist
-      </button>
-      <Link to={`/edit/${id}`} className="btn btn-primary">
-        Editar Playlist
-      </Link>
+      <div id="infoPlaylist">
+        <div id="textoDetails">
+          <p id="infoOwner">
+            By : <b>{info.owner}</b>
+          </p>
+
+          <p id="infoCategory">
+            Category : <b>{info.category}</b>
+          </p>
+          <p id="infoDate">
+            Created :<b>{info.date}</b>
+          </p>
+          <p id="infoId">ID : {info._id}</p>
+        </div>
+      </div>
+      <div id="buttonsDetails">
+        <button
+          id="buttonApagarDetails"
+          onClick={handleDelete}
+          className="btn btn-danger"
+        >
+          Apagar Playlist
+        </button>
+        <Link
+          id="buttonEditarDetails"
+          to={`/edit/${id}`}
+          className="btn btn-primary"
+        >
+          Editar Playlist
+        </Link>
+      </div>
+      <div id="bodyDetails">
+        {info.movies.map((currentMovie) => {
+          return (
+            <>
+              <div id="cardDetails">
+                <Card props={currentMovie}></Card>}
+              </div>
+            </>
+          );
+        })}
+      </div>
     </>
   );
 }
