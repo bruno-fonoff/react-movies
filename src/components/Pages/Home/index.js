@@ -2,6 +2,9 @@ import "./style.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import joker from "../../../assets/images/coringa.jpg";
+import batman from "../../../assets/images/batman.jpg";
+import harley from "../../../assets/images/harley.jpg";
 
 export function Home() {
   const [playlistMovies, setplaylistMovies] = useState([]);
@@ -16,41 +19,53 @@ export function Home() {
     allMovies();
   }, []);
 
+  const arrA = [batman, joker, harley];
+  let newArray = [];
+  function randomizar(array) {
+    newArray = array.sort(() => Math.random() - 0.5).slice(0, 1);
+  }
+
+  randomizar(arrA);
+  console.log(newArray);
   return (
     <>
       <div id="tituloCreate">PLAYLIST MOVIES</div>
       <div>
-        <Link id="createPlay" to="/create" className="btn btn-primary">
+        <Link id="createPlay" to="/create" className="btn btn-dark">
           Crie Sua PlayList
         </Link>
       </div>
-
-      {playlistMovies.map((currentMovie) => {
-        return (
-          <>
-            <div id="cardsHome">
-              <Link to={`/details/${currentMovie._id}`}>
-                <div
-                  className="card text-white bg-info mb-3"
-                  style={{ width: "18rem" }}
-                >
-                  <div class="card-header">
-                    <p>
-                      <h5>By:</h5> <h4>{currentMovie.owner}</h4>
-                    </p>
+      <div id="home">
+        {playlistMovies.map((currentMovie) => {
+          return (
+            <>
+              <div id="cardsHome">
+                <Link id="linkCard" to={`/details/${currentMovie._id}`}>
+                  <div>
+                    <div className="card-header">
+                      <img
+                        id="fotoperfil"
+                        src={arrA.sort(() => Math.random() - 0.5).slice(0, 1)}
+                        alt="foto-perfil"
+                      />
+                      <p>
+                        <h2 style={{ color: "red" }}>
+                          {currentMovie.category}
+                        </h2>
+                        <hr />
+                      </p>
+                    </div>
+                    <div className="card-body-home">
+                      <h3 className="card-title-home">{currentMovie.owner}</h3>
+                      <p className="card-text-home">{currentMovie.date}</p>
+                    </div>
                   </div>
-                  <div className="card-body-home">
-                    <h5 className="card-title-home">
-                      Category: {currentMovie.category}
-                    </h5>
-                    <p className="card-text-home">Date: {currentMovie.date}</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </>
-        );
-      })}
+                </Link>
+              </div>
+            </>
+          );
+        })}
+      </div>
     </>
   );
 }

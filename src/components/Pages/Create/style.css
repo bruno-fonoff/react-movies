@@ -1,5 +1,5 @@
 #button {
-  box-shadow: 10px 10px 20px #ff0000;
+  box-shadow: 15px 10px 30px #ff0000;
   text-align: center;
   margin-top: 20px;
   margin-left: 50px;
@@ -40,10 +40,12 @@
   font-weight: bolder;
   position: relative;
   top: -75px;
+  text-shadow: 10px 10px 20px #000000;
 }
 .input {
-  margin-left: 10px;
-  margin-right: 150px;
+  margin-left: 30px;
+  margin-right: 200px;
+  box-shadow: 10px 10px 20px #000000;
 }
 .selectMovies {
   text-align: center;
@@ -56,4 +58,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#btnCriar {
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px #000000;
+  font-weight: bolder;
 }

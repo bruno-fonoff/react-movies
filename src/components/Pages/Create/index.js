@@ -49,6 +49,7 @@ export function Create() {
       console.log(err);
     }
   }
+
   //======================================================================================================================================
   //======================================================================================================================================
   return (
@@ -73,6 +74,7 @@ export function Create() {
               name="owner"
               value={form.owner}
               type="string"
+              required
               onChange={handleChange}
             />
 
@@ -83,6 +85,7 @@ export function Create() {
               name="category"
               value={form.category}
               type="string"
+              required
               onChange={handleChange}
             />
             <label htmlFor="date-input">Data </label>
@@ -92,9 +95,13 @@ export function Create() {
               name="date"
               value={form.date}
               type="date"
+              required
               onChange={handleChange}
             />
-            <button type="submit">Criar</button>
+
+            <button id="btnCriar" className="btn btn-dark" type="submit">
+              Criar
+            </button>
           </form>
         </div>
         <h1 className="selectMovies">Selecione os Filmes</h1>
