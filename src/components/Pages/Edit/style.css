@@ -1,0 +1,44 @@
+#bodyEdit {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+#cardEdit {
+  margin: 50px;
+}
+#buttonDelete {
+  display: flex;
+  justify-content: center;
+}
+#buttonSub {
+  width: 300px;
+  height: 70px;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px red;
+  font-weight: bolder;
+  border: white solid 2px;
+  margin-left: 50px;
+}
+#headerEdit {
+  display: flex;
+  background-color: black;
+  justify-content: start;
+  align-items: center;
+}
+#formEdit {
+  font-size: 30px;
+  background-color: black;
+  display: flex;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 10px 10px 20px #ff0000;
+  color: aliceblue;
+  justify-content: space-evenly;
+  position: relative;
+}
+.inputEdit {
+  margin-right: 100px;
+  box-shadow: 10px 10px 20px red;
+}

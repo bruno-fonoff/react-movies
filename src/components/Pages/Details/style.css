@@ -11,7 +11,6 @@
   display: flex;
   background-color: black;
   flex-wrap: wrap;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 #infoPlaylist {
   color: antiquewhite;
@@ -24,8 +23,10 @@
 #textoDetails {
   margin-left: 50px;
   border: 3px solid white;
-  margin: 10px 800px;
+  margin: 10px 850px;
   box-shadow: 20px 20px 30px #ff0000;
+  position: relative;
+  bottom: 100px;
 }
 #infoOwner {
   font-size: 30px;
@@ -51,17 +52,25 @@ b {
 }
 #buttonApagarDetails {
   width: 300px;
-  margin-top: 70px;
   height: 70px;
-  font-size: 30px;
-  margin-bottom: 70px;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px #ff0000;
+  font-weight: bolder;
+  border: white solid 2px;
+  margin: 100px 0px;
 }
 #buttonEditarDetails {
   width: 300px;
-  margin-top: 70px;
   height: 70px;
-  font-size: 30px;
-  margin-bottom: 70px;
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px #ff0000;
+  font-weight: bolder;
+  border: white solid 2px;
+  margin: 100px 0px;
 }
 #voltarHomeDetails {
   background-color: black;

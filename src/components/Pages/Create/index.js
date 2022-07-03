@@ -64,7 +64,6 @@ export function Create() {
           </Link>
         </div>
         <div id="tituloooooo">
-          {" "}
           <h1 id="tituloCreate">Crie Sua PlayList</h1>
         </div>
 
@@ -102,7 +101,7 @@ export function Create() {
               onChange={handleChange}
             />
 
-            <button id="btnCriar" className="btn btn-dark" type="submit">
+            <button id="btnCriar" className="btn btn-primary" type="submit">
               Criar
             </button>
           </form>

@@ -1,7 +1,3 @@
-#tituloHome {
-  font-size: 100px;
-  text-align: center;
-}
 #cardsHome {
   margin: 50px;
   width: 300px;
@@ -9,25 +5,29 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.898);
   box-shadow: 15px 10px 30px #ff0000;
+  border: solid 2px white;
   color: aliceblue;
 }
-#tituloCreate {
+#tituloCreateHome {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 150px;
   text-align: center;
   text-shadow: 10px 10px 20px #ff0000;
-  display: flex;
-  justify-content: center;
+  background-color: black;
+  color: antiquewhite;
 }
 #createPlay {
   text-align: center;
   display: flex;
   justify-content: center;
   font-size: 70px;
+  border-radius: 0;
 }
 #home {
   display: flex;
   flex-wrap: wrap;
+  background-color: black;
+  padding-bottom: 300px;
 }
 #fotoperfil {
   width: 250px;
@@ -44,4 +44,8 @@
 }
 .card-text-home {
   margin: 10px;
+}
+#bodyHome {
+  background-color: black;
+  height: 100%;
 }

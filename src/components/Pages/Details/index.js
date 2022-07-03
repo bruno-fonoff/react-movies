@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Card } from "../../Card/";
 import home from "../../../assets/images/home.png";
 import "./style.css";
+import { Toaster, toast } from "react-hot-toast";
 
 export function Details() {
   const { id } = useParams();
@@ -34,6 +35,7 @@ export function Details() {
       await axios.delete(
         `https://ironrest.herokuapp.com/bruno-testproject/${id}`
       );
+      // toast.error("Playlist Deletada!");
 
       navigate("/");
     } catch (err) {
@@ -43,8 +45,11 @@ export function Details() {
 
   return (
     <>
+      <div>
+        <Toaster />
+      </div>
+
       <div id="voltarHomeDetails">
-        {" "}
         <Link to="/">
           <img className="img" src={home} alt="home" />
         </Link>
@@ -62,7 +67,6 @@ export function Details() {
           <p id="infoDate">
             Created :<b>{info.date}</b>
           </p>
-          <p id="infoId">ID : {info._id}</p>
         </div>
       </div>
       <div id="buttonsDetails">
@@ -86,7 +90,7 @@ export function Details() {
           return (
             <>
               <div id="cardDetails">
-                <Card props={currentMovie}></Card>}
+                <Card props={currentMovie}></Card>
               </div>
             </>
           );
