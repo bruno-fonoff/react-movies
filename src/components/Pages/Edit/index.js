@@ -155,7 +155,7 @@ export function Edit() {
                     {currentMovie.original_title}
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    {currentMovie.release_date}
+                    {currentMovie.release_date.split("-").reverse().join("-")}
                   </StyledTableCell>
                   <StyledTableCell align="right">
                     {currentMovie.vote_average}
