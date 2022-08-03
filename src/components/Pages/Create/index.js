@@ -3,9 +3,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import home from "../../../assets/images/home.png";
-import { Card } from "../../Card";
+// import { Card } from "../../Card";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
+import { RecipeReviewCard } from "../../NewCard";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { red } from "@mui/material/colors";
+import gifJoker from "../../../assets/images/clapsJokerWeb.webp";
 
 export function Create() {
   const navigate = useNavigate();
@@ -16,7 +20,7 @@ export function Create() {
     date: "",
     movies: [],
   });
-  console.log(form);
+
   function handleChange(event) {
     setForm({ ...form, [event.target.name]: event.target.value });
   }
@@ -32,7 +36,7 @@ export function Create() {
   }, []);
 
   function noSelectedMovies(element) {
-    setmovies(movies.filter((cElement) => cElement.id !== element.id));
+    setmovies(movies.filter((currentMovie) => currentMovie.id !== element.id));
 
     console.log(element.id);
   }
@@ -49,6 +53,7 @@ export function Create() {
       console.log(err);
     }
   }
+  console.log(form);
 
   //======================================================================================================================================
   //======================================================================================================================================
@@ -63,7 +68,7 @@ export function Create() {
             <img className="imgHome" src={home} alt="home" />
           </Link>
         </div>
-        <div id="tituloooooo">
+        <div id="titleCreatePage">
           <h1 id="tituloCreate">Crie Sua PlayList</h1>
         </div>
 
@@ -80,16 +85,6 @@ export function Create() {
               onChange={handleChange}
             />
 
-            <label htmlFor="category-input">Categoria</label>
-            <input
-              className="input"
-              id="category-input"
-              name="category"
-              value={form.category}
-              type="string"
-              required
-              onChange={handleChange}
-            />
             <label htmlFor="date-input">Data </label>
             <input
               className="input"
@@ -101,18 +96,31 @@ export function Create() {
               onChange={handleChange}
             />
 
+            <label htmlFor="category-input">Descrição</label>
+            <input
+              className="input"
+              id="category-input"
+              name="category"
+              value={form.category}
+              type="string"
+              required
+              onChange={handleChange}
+            />
+
             <button id="btnCriar" className="btn btn-primary" type="submit">
               Criar
             </button>
           </form>
+          <h1 className="selectMovies">Selecione os Filmes</h1>
         </div>
-        <h1 className="selectMovies">Selecione os Filmes</h1>
+
         <div id="cards">
           {movies.map((currentMovie) => {
             return (
               <>
                 <div id="tadificil">
-                  <Card props={currentMovie}></Card>
+                  {/* <Card props={currentMovie}></Card> */}
+                  <RecipeReviewCard props={currentMovie} />
                   <button
                     type="button"
                     id="button"
@@ -123,10 +131,26 @@ export function Create() {
                         movies: [...form.movies, currentMovie],
                       });
                       noSelectedMovies(currentMovie);
-                      toast.success("Filme Adicionado!");
+                      toast(
+                        (t) => (
+                          <>
+                            <img id="imgToast" src={gifJoker} alt="gifjoker" />
+                          </>
+                        ),
+
+                        {
+                          style: {
+                            backgroundColor: "black",
+                          },
+                          iconTheme: {
+                            primary: "red",
+                            secondary: "#FFFAEE",
+                          },
+                        }
+                      );
                     }}
                   >
-                    Adicionar
+                    <FavoriteIcon sx={{ color: red[700] }} />
                   </button>
                 </div>
               </>

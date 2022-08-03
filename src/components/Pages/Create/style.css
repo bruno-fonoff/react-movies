@@ -1,12 +1,13 @@
 #button {
-  box-shadow: 15px 10px 30px #ff0000;
+  /* box-shadow: 15px 10px 30px #ff0000; */
   text-align: center;
-  margin-top: 20px;
-  margin-left: 50px;
+  margin: 0 auto;
   border-radius: 50px;
-  width: 250px;
+  width: 100px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  border: dodgerblue 2px solid;
 }
 #cards {
   display: flex;
@@ -16,42 +17,39 @@
   justify-content: space-evenly;
 }
 #tituloCreate {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 150px;
+  font-size: 90px;
   text-shadow: 10px 10px 20px #ff0000;
-  position: relative;
-  right: 100px;
   color: antiquewhite;
 }
 .imgHome {
-  height: 100px;
+  height: 70px;
   margin-top: 100px;
-  position: relative;
-  left: -600px;
+  position: absolute;
+  left: 50px;
+  top: -50px;
 }
 #header {
   display: flex;
 }
 #form {
-  font-size: 30px;
-  margin: 25px;
+  font-size: 22px;
+  margin-left: 25px;
   text-align: center;
   font-weight: bolder;
-  text-shadow: 10px 10px 20px #ff0000;
   color: aliceblue;
+  align-items: center;
 }
 .input {
   margin-right: 100px;
-  box-shadow: 10px 10px 20px red;
+  /* box-shadow: 10px 10px 20px red; */
 }
 .selectMovies {
-  font-size: 70px;
-  margin: 50px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
+  font-size: 40px;
+  margin: 20px 0 20px 0;
   display: flex;
   justify-content: center;
   color: dodgerblue;
+  text-shadow: none;
 }
 #tadificil {
   display: flex;
@@ -59,12 +57,12 @@
   justify-content: center;
 }
 #btnCriar {
-  width: 300px;
-  height: 70px;
-  font-size: 25px;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
   text-align: center;
   align-items: center;
-  box-shadow: 10px 10px 20px #ff0000;
+  /* box-shadow: 10px 10px 20px #ff0000; */
   font-weight: bolder;
   border: white solid 2px;
 }
@@ -74,19 +72,28 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-#tituloooooo {
+#titleCreatePage {
   display: flex;
   justify-content: center;
-
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #owner-input {
-  margin-left: 40px;
+  margin-left: 20px;
+  border-radius: 40px;
 }
 #category-input {
-  margin-left: 40px;
+  margin-left: 20px;
+  border-radius: 20px;
+  width: 400px;
 }
 #date-input {
-  margin-left: 40px;
+  margin-left: 20px;
+  border-radius: 40px;
+  width: 150px;
+}
+#imgToast {
+  height: 250px;
+  margin: 0;
+  padding: 0;
 }

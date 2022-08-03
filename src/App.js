@@ -4,6 +4,7 @@ import { Home } from "./components/Pages/Home";
 import { Create } from "./components/Pages/Create";
 import { Details } from "./components/Pages/Details";
 import { Edit } from "./components/Pages/Edit";
+import CustomizedTables from "./components/Table";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/create" element={<Create />}></Route>
         <Route path="/details/:id" element={<Details />}></Route>
         <Route path="/edit/:id" element={<Edit />}></Route>
+        <Route path="/teste" element={<CustomizedTables />}></Route>
       </Routes>
     </div>
   );

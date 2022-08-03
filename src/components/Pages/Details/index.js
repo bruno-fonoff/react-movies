@@ -5,6 +5,7 @@ import { Card } from "../../Card/";
 import home from "../../../assets/images/home.png";
 import "./style.css";
 import { Toaster, toast } from "react-hot-toast";
+import { RecipeReviewCard } from "../../../components/NewCard";
 
 export function Details() {
   const { id } = useParams();
@@ -42,7 +43,8 @@ export function Details() {
       console.log(err);
     }
   }
-
+  // console.log(typeof info.date);
+  // let date = info.date.split("-").reverse().join("-");
   return (
     <>
       <div>
@@ -57,15 +59,15 @@ export function Details() {
 
       <div id="infoPlaylist">
         <div id="textoDetails">
-          <p id="infoOwner">
+          <p className="infosDetails">
             By : <b>{info.owner}</b>
           </p>
 
-          <p id="infoCategory">
-            Category : <b>{info.category}</b>
-          </p>
-          <p id="infoDate">
-            Created :<b>{info.date}</b>
+          {/* <p className="infosDetails">
+            Created :<b>{}</b>
+          </p> */}
+          <p className="infosDetails">
+            Descrição : <b>{info.category}</b>
           </p>
         </div>
       </div>
@@ -90,7 +92,7 @@ export function Details() {
           return (
             <>
               <div id="cardDetails">
-                <Card props={currentMovie}></Card>
+                <RecipeReviewCard props={currentMovie} />
               </div>
             </>
           );

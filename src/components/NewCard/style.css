@@ -1,0 +1,17 @@
+#cardActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+#overviewCardNew {
+  display: flex;
+  align-items: center;
+}
+.MuiCardHeader-root {
+  height: 100px;
+  width: 250px;
+}
+
+#cardMedia {
+  width: 250px;
+}

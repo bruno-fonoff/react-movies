@@ -1,49 +1,43 @@
 .img {
-  height: 100px;
-  margin: 50px;
+  height: 50px;
+  margin: 25px;
 }
-.cards {
-}
+
 #cardDetails {
-  margin: 50px;
+  margin: 20px;
 }
 #bodyDetails {
   display: flex;
   background-color: black;
   flex-wrap: wrap;
+  height: 100%;
+  min-height: 1080px;
+  justify-content: space-around;
 }
 #infoPlaylist {
   color: antiquewhite;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   background-color: black;
   text-align: center;
+  height: 10px;
 }
 #textoDetails {
-  margin-left: 50px;
-  border: 3px solid white;
-  margin: 10px 850px;
-  box-shadow: 20px 20px 30px #ff0000;
-  position: relative;
   bottom: 100px;
+  position: relative;
+  display: flex;
 }
-#infoOwner {
+
+.infosDetails {
   font-size: 30px;
+  color: dodgerblue;
+  margin-left: 40px;
 }
-#infoCategory {
-  font-size: 30px;
-}
-#infoDate {
-  font-size: 30px;
-}
-#infoId {
-  font-size: 30px;
-}
+
 b {
   margin-left: 30px;
-  color: red;
-  font-size: 50px;
+  color: antiquewhite;
+  font-size: 40px;
 }
 #buttonsDetails {
   background-color: black;
@@ -51,26 +45,24 @@ b {
   justify-content: space-around;
 }
 #buttonApagarDetails {
-  width: 300px;
-  height: 70px;
-  font-size: 25px;
+  width: 170px;
+  height: 50px;
+  font-size: 15px;
   text-align: center;
   align-items: center;
-  box-shadow: 10px 10px 20px #ff0000;
+
   font-weight: bolder;
   border: white solid 2px;
-  margin: 100px 0px;
 }
 #buttonEditarDetails {
-  width: 300px;
-  height: 70px;
-  font-size: 25px;
+  width: 170px;
+  height: 50px;
+  font-size: 15px;
   text-align: center;
   align-items: center;
-  box-shadow: 10px 10px 20px #ff0000;
+
   font-weight: bolder;
   border: white solid 2px;
-  margin: 100px 0px;
 }
 #voltarHomeDetails {
   background-color: black;

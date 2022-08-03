@@ -30,7 +30,7 @@ export function Home() {
   return (
     <>
       <div id="bodyHome">
-        <div id="tituloCreateHome">PLAYLIST MOVIES</div>
+        <div id="tituloCreateHome">MOVIES LIST</div>
         <div>
           <Link id="createPlay" to="/create" className="btn btn-primary">
             Crie Sua PlayList
@@ -43,25 +43,24 @@ export function Home() {
                 <div id="cardsHome">
                   <Link id="linkCard" to={`/details/${currentMovie._id}`}>
                     <div>
-                      <div className="card-header">
-                        <img
-                          id="fotoperfil"
-                          src={arrA.sort(() => Math.random() - 0.5).slice(0, 1)}
-                          alt="foto-perfil"
-                        />
-                        <p>
-                          <h2 style={{ color: "red" }}>
-                            {currentMovie.category}
-                          </h2>
-                          <hr />
-                        </p>
+                      <img
+                        id="fotoperfil"
+                        src={arrA.sort(() => Math.random() - 0.5).slice(0, 1)}
+                        alt="foto-perfil"
+                      />
+
+                      <div>
+                        <div className="card-body-home">
+                          <h4 className="card-title-home">
+                            {currentMovie.owner}
+                          </h4>
+                          <p className="card-text-home">
+                            {currentMovie.date.split("-").reverse().join("-")}
+                          </p>
+                        </div>
                       </div>
-                      <div className="card-body-home">
-                        <h3 className="card-title-home">
-                          {currentMovie.owner}
-                        </h3>
-                        <p className="card-text-home">{currentMovie.date}</p>
-                      </div>
+                      <hr />
+                      <h5 id="testando">{currentMovie.category}</h5>
                     </div>
                   </Link>
                 </div>
