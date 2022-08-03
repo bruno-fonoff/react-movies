@@ -77,14 +77,14 @@ export function Details() {
           to={`/edit/${id}`}
           className="btn btn-primary"
         >
-          Editar Playlist
+          Editar Lista
         </Link>
         <button
           id="buttonApagarDetails"
           onClick={handleDelete}
           className="btn btn-danger"
         >
-          Apagar Playlist
+          Apagar Lista
         </button>
       </div>
       <div id="bodyDetails">

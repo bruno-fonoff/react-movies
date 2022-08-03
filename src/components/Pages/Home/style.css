@@ -29,6 +29,7 @@
   background-color: black;
   padding-bottom: 300px;
   min-height: 720px;
+  justify-content: space-around;
 }
 #fotoperfil {
   width: 246px;

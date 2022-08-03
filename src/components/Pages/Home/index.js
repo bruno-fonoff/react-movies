@@ -33,7 +33,7 @@ export function Home() {
         <div id="tituloCreateHome">MOVIES LIST</div>
         <div>
           <Link id="createPlay" to="/create" className="btn btn-primary">
-            Crie Sua PlayList
+            Crie Sua Lista
           </Link>
         </div>
         <div id="home">

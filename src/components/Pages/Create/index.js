@@ -72,7 +72,7 @@ export function Create() {
           </Link>
         </div>
         <div id="titleCreatePage">
-          <h1 id="tituloCreate">Crie Sua PlayList</h1>
+          <h1 id="tituloCreate">Crie Sua Lista</h1>
         </div>
 
         <div id="form">
