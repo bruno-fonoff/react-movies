@@ -1,9 +1,9 @@
 #cardsHome {
   margin: 50px;
   width: 250px;
-  height: 450px;
+  height: 420px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.898);
+  background-color: black;
   /* box-shadow: 15px 10px 30px #ff0000; */
   border: solid 2px white;
   color: aliceblue;
@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   background-color: black;
   padding-bottom: 300px;
+  min-height: 720px;
 }
 #fotoperfil {
   width: 246px;

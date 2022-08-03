@@ -72,13 +72,6 @@ export function Details() {
         </div>
       </div>
       <div id="buttonsDetails">
-        <button
-          id="buttonApagarDetails"
-          onClick={handleDelete}
-          className="btn btn-danger"
-        >
-          Apagar Playlist
-        </button>
         <Link
           id="buttonEditarDetails"
           to={`/edit/${id}`}
@@ -86,6 +79,13 @@ export function Details() {
         >
           Editar Playlist
         </Link>
+        <button
+          id="buttonApagarDetails"
+          onClick={handleDelete}
+          className="btn btn-danger"
+        >
+          Apagar Playlist
+        </button>
       </div>
       <div id="bodyDetails">
         {info.movies.map((currentMovie) => {

@@ -2,7 +2,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 // import { Card } from "../../Card";
-import home from "../../../assets/images/home.png";
+import back from "../../../assets/images/back.png";
 import { Toaster, toast } from "react-hot-toast";
 import "./style.css";
 // import CustomizedTables from "../../Table";
@@ -87,8 +87,8 @@ export function Edit() {
         <Toaster />
       </div>
       <div id="headerEdit">
-        <Link to="/">
-          <img className="img" src={home} alt="home" />
+        <Link to={`/details/${id}`}>
+          <img className="img" src={back} alt="home" />
         </Link>
       </div>
       <div id="formEdit">
@@ -104,7 +104,7 @@ export function Edit() {
             onChange={handleChange}
           />
 
-          <label htmlFor="category-input">Categoria</label>
+          <label htmlFor="category-input">Descrição</label>
           <input
             className="inputEdit"
             id="category-input"
@@ -138,30 +138,30 @@ export function Edit() {
 
       <div id="bodyEdit">
         {/* <CustomizedTables props={info.movies} /> */}
-        <TableContainer component={Paper}>
-          <Table sx={{ maxWidth: 700 }} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <StyledTableCell>Título</StyledTableCell>
-                <StyledTableCell align="right">Lançamento</StyledTableCell>
-                <StyledTableCell align="right">Nota</StyledTableCell>
-                <StyledTableCell align="right"></StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {info.movies.map((currentMovie) => (
-                <StyledTableRow key={currentMovie.title}>
-                  <StyledTableCell component="th" scope="row">
-                    {currentMovie.original_title}
-                  </StyledTableCell>
-                  <StyledTableCell align="right">
-                    {currentMovie.release_date.split("-").reverse().join("-")}
-                  </StyledTableCell>
-                  <StyledTableCell align="right">
-                    {currentMovie.vote_average}
-                  </StyledTableCell>
-                  <StyledTableCell align="right">
-                    <div id="buttonDelete">
+        <div id="table">
+          <TableContainer id="tableContainer" component={Paper}>
+            <Table aria-label="customized table">
+              <TableHead>
+                <TableRow>
+                  <StyledTableCell>Título</StyledTableCell>
+                  <StyledTableCell align="right">Lançamento</StyledTableCell>
+                  <StyledTableCell align="right">Nota</StyledTableCell>
+                  <StyledTableCell align="right"></StyledTableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {info.movies.map((currentMovie) => (
+                  <StyledTableRow key={currentMovie.title}>
+                    <StyledTableCell component="th" scope="row">
+                      {currentMovie.original_title}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {currentMovie.release_date.split("-").reverse().join("-")}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
+                      {currentMovie.vote_average}
+                    </StyledTableCell>
+                    <StyledTableCell align="right">
                       <button
                         onClick={() => {
                           handleDelete(currentMovie);
@@ -171,13 +171,13 @@ export function Edit() {
                       >
                         Remover Filme
                       </button>
-                    </div>
-                  </StyledTableCell>
-                </StyledTableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+                    </StyledTableCell>
+                  </StyledTableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </div>
 
         {/* {info.movies.map((currentMovie) => {
           return (

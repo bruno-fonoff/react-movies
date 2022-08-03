@@ -67,7 +67,7 @@
   border: white solid 2px;
 }
 #bodyCreate {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.864);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
