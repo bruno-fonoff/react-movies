@@ -7,9 +7,11 @@ import home from "../../../assets/images/home.png";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
 import { RecipeReviewCard } from "../../NewCard";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { red } from "@mui/material/colors";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import { red } from "@mui/material/colors";
 import gifJoker from "../../../assets/images/clapsJokerWeb.webp";
+// import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 export function Create() {
   const navigate = useNavigate();
@@ -48,6 +50,7 @@ export function Create() {
         "https://ironrest.herokuapp.com/bruno-testproject",
         form
       );
+
       navigate("/");
     } catch (err) {
       console.log(err);
@@ -150,7 +153,7 @@ export function Create() {
                       );
                     }}
                   >
-                    <FavoriteIcon sx={{ color: red[700] }} />
+                    <AddCircleIcon sx={{ color: "#1e90ff" }} />
                   </button>
                 </div>
               </>
